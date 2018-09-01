@@ -1433,6 +1433,7 @@
 
 
 
+    <% if false %>
     <!-- Mainly scripts -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1448,6 +1449,16 @@
 
     <!-- FooTable -->
     <script src="js/plugins/footable/footable.all.min.js"></script>
+    <% end %>
+
+    <% javascript_include_tag 'inspinia/jquery-3.1.1.min.js' %>
+    <% javascript_include_tag 'inspinia/bootstrap.min.js' %>
+    <% javascript_include_tag 'inspinia/jquery.metisMenu.js' %>
+    <% javascript_include_tag 'inspinia/jquery.slimscroll.min.js' %>
+    <% javascript_include_tag 'inspinia/inspinia.js' %>
+    <% javascript_include_tag 'inspinia/pace.min.js' %>
+    <% javascript_include_tag 'inspinia/bootstrap-datepicker.js' %>
+    <% javascript_include_tag 'inspinia/footable.all.min.js' %>
 
     <!-- Page-Level Scripts -->
     <script>

@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require inspinia/jquery-3.1.1.min.js
 //= require_tree .
