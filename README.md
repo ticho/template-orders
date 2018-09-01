@@ -7,9 +7,9 @@ The commits show all the steps I took.
 ## How to
 
 For each css and js resources we will have to:
-  1. Add them in the assets folder/< type of the file >
-  2. Reference them *properly* in the html file
-  3. Reference them in the assets.rb file
+  1. Add them in the `app/assets/< type of the file >` folder
+  2. Reference them *properly* in the `html.erb` file, using either `stylesheet_link_tag` or `javascript_include_tag`
+  3. Reference them in the `config/initializers/assets.rb` file
 
 As for the images, it is simpler, the `image_tag` helper does the job. The files need to be placed in assets/images.
 
@@ -21,9 +21,9 @@ Which css files do I need to add? Lookup the stylesheet tags in the html file.
 
 Which js files do I need to add? Those that provoke errors in your browser console. Otherwise lookup the scrip tags in your html file.
 
-As for the fonts and the images, the rails log will display some errors.
+As for the fonts and the images, the rails console log will display some errors.
 
-There are fonts URLs in the css files, they will need to be modified (I used the `asset-path` helper, available in `.scss` files).
+There are fonts URLs in the css files, they will need to be modified (I used the `asset-path` helper, available for `.scss` files).
 
 `ls -1` displays the list of files in one column, easy to copy paste.
 
