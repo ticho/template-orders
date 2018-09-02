@@ -93,18 +93,18 @@ There are fonts URLs in the css files, they will need to be modified (I used the
 
 ### Others
 
-The jquery file needs to be required in `application.js`.
+- The jquery file needs to be required in `application.js`.
 
-`ls -1` displays the list of files in one column, easy to copy paste.
+- `ls -1` displays the list of files in one column, easy to copy paste.
 
-If your assets are delivered correctly locally but fail to compile on Heroku, try 
+- If your assets are delivered correctly locally but fail to compile on Heroku, try to catch the error in your console logs with :
 ```sh
 RAILS_ENV=production rails assets:precompile
 ```
-to catch the error in your console logs.
+  
 
-If you put your assets in folders, don't forget to modify the path to those assets in the rails helpers and in `assets.rb`
+- If you put your assets in folders, don't forget to modify the path to those assets in the rails helpers and in `assets.rb`
 
-Don't forget to restart your server when you modify `assets.rb` (as stated [here](https://github.com/ticho/template-orders/commit/694449ff553162d030dc6adb7fe5b4734e1ecf21#diff-05c836ce3d55f791a34c33cac08ccd1aR1)).
+- :warning: Don't forget to restart your server when you modify `assets.rb` (as stated [here](https://github.com/ticho/template-orders/commit/694449ff553162d030dc6adb7fe5b4734e1ecf21#diff-05c836ce3d55f791a34c33cac08ccd1aR1)).
 
 Good luck
