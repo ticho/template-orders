@@ -1,5 +1,6 @@
 # Installing a front-end template on a rails app
 
+
 The commits show all the steps I took.
 
 Your can see the Inspinia template installed on a page [here](https://radiant-sea-74712.herokuapp.com/).
@@ -96,8 +97,13 @@ The jquery file needs to be required in `application.js`.
 
 `ls -1` displays the list of files in one column, easy to copy paste.
 
-If your assets are delivered correctly locally but fail to compile on Heroku, try `RAILS_ENV=production rails assets:precompile` to catch the error in your console logs.
+If your assets are delivered correctly locally but fail to compile on Heroku, try 
+```sh
+RAILS_ENV=production rails assets:precompile
+```
+to catch the error in your console logs.
 
 If you put your assets in folders, don't forget to modify the path to those assets in the rails helpers and in `assets.rb`
+
 
 Good luck
