@@ -1,32 +1,96 @@
-# Template orders
-
-Installing a front-end template on a rails app.
+# Installing a front-end template on a rails app
 
 The commits show all the steps I took.
+
+Your can see the Inspinia template installed on a page [here](https://radiant-sea-74712.herokuapp.com/).
+
+## Index
+  1. [How to](#how-to)
+  2. [Commits](#commits)
+  3. [General tips](#general-tips)
 
 ## How to
 
 For each css and js resources we will have to:
   1. Add them in the `app/assets/< type of the file >` folder
+
+  ``` sh
+app
+├── assets
+│   ├── config
+│   ├── images
+│   ├── javascripts
+|   |   .
+│   │   └── inspinia.js
+│   └── stylesheets
+│       .
+│       └── animate.css
+  ```
   2. Reference them *properly* in the `html.erb` file, using either `stylesheet_link_tag` or `javascript_include_tag`
+
+  ``` erb
+    <%# index.html.erb %>
+    <html>
+    <head>
+      <%= stylesheet_link_tag 'animate.css' %>
+    </head>
+    <body>
+      <% javascript_include_tag 'inspinia.js' %>
+    </body>
+    </html>
+  ```
   3. Reference them in the `config/initializers/assets.rb` file
+
+  ``` ruby
+  # config/initializers/assets.rb
+  Rails.application.config.assets.precompile += %w(
+    animate.css
+    inspinia.js 
+  )
+  ```
 
 As for the images, it is simpler, the `image_tag` helper does the job. The files need to be placed in assets/images.
 
 The fonts are less obvious because they don't generate any browser error. They are referenced in a css file. The path to each font needs to be updated.
 
+```scss
+/* font-awesome.css.scss */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(asset-path('inspinia/fonts/fontawesome-webfont3e6e.eot?v=4.7.0'));
+  ...
+}
+```
+
+## Commits
+You can see the steps I took to install the template by following the commits.
+
+1. [Installing the css](https://github.com/ticho/template-orders/commit/3f0fd7fcb01a6f36d564cd9bc10a8d83aef5d1fa)
+2. [Installing the js files](https://github.com/ticho/template-orders/commit/3f0fd7fcb01a6f36d564cd9bc10a8d83aef5d1fa)
+3. [Added Fontawesome](https://github.com/ticho/template-orders/commit/3f0fd7fcb01a6f36d564cd9bc10a8d83aef5d1fa)
+4. [Added footable fonts](https://github.com/ticho/template-orders/commit/8c10d053e37ffbf2f8ad5dcfbf95ee05bd4ddbf5)
+
 ## General tips
 
-Which css files do I need to add? Lookup the stylesheet tags in the html file.
+### How do I know which css files do I need to add?
+Lookup the stylesheet tags in the html file.
 
-Which js files do I need to add? Those that provoke errors in your browser console. Otherwise lookup the scrip tags in your html file.
+### How do I know which js files do I need to add?
+Those that provoke errors in your browser console. Otherwise lookup the scrip tags in your html file.
 
-As for the fonts and the images, the rails console log will display some errors.
+### Fonts and images
+The rails console log will display some errors.
 
 There are fonts URLs in the css files, they will need to be modified (I used the `asset-path` helper, available for `.scss` files).
+
+### Others
+
+The jquery file needs to be required in `application.js`.
 
 `ls -1` displays the list of files in one column, easy to copy paste.
 
 If your assets are delivered correctly locally but fail to compile on Heroku, try `RAILS_ENV=production rails assets:precompile` to catch the error in your console logs.
+
+If you put your assets in folders, don't forget to modify the path to those assets in the rails helpers and in `assets.rb`
 
 Good luck
