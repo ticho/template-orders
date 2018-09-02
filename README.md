@@ -74,9 +74,9 @@ You can see the steps I took to install the template by following the commits.
     - [application.js](https://github.com/ticho/template-orders/commit/158ca9891118d93bde1007fd5d266d23c30e27fd#diff-a9c3bd311eab80c9ebe6a69830f9ad02)
     - [index.html.erb](https://github.com/ticho/template-orders/commit/158ca9891118d93bde1007fd5d266d23c30e27fd#diff-d9db7f7cb7dcd9bbe759b990b685bdda)
 3. [Added Fontawesome](https://github.com/ticho/template-orders/commit/3f0fd7fcb01a6f36d564cd9bc10a8d83aef5d1fa)
-    - [css file changed into css](https://github.com/ticho/template-orders/commit/23fcb6828b0600b311b747bb03bd7e5d3acf459a#diff-65a38f57a96bc9eb32febac3240856fb)
+    - [scss file](https://github.com/ticho/template-orders/commit/23fcb6828b0600b311b747bb03bd7e5d3acf459a#diff-65a38f57a96bc9eb32febac3240856fb)
 4. [Added footable fonts](https://github.com/ticho/template-orders/commit/8c10d053e37ffbf2f8ad5dcfbf95ee05bd4ddbf5)
-    - [css file changed into scss](https://github.com/ticho/template-orders/commit/8c10d053e37ffbf2f8ad5dcfbf95ee05bd4ddbf5#diff-80a793135a769783ec08249407f8c75e)
+    - [scss file](https://github.com/ticho/template-orders/commit/8c10d053e37ffbf2f8ad5dcfbf95ee05bd4ddbf5#diff-80a793135a769783ec08249407f8c75e)
 
 ## General tips
 
@@ -89,7 +89,7 @@ Those that provoke errors in your browser console. Otherwise lookup the scrip ta
 ### Fonts and images
 The rails console log will display some errors.
 
-There are fonts URLs in the css files, they will need to be modified (I used the `asset-path` helper, available for `.scss` files).
+There are fonts URLs in the css files, they will need to be modified (I used the `asset-path` helper, available for <strong>`.scss`</strong> files).
 
 ### Others
 
