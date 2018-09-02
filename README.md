@@ -105,5 +105,6 @@ to catch the error in your console logs.
 
 If you put your assets in folders, don't forget to modify the path to those assets in the rails helpers and in `assets.rb`
 
+Don't forget to restart your server when you modify `assets.rb` (as stated [here](https://github.com/ticho/template-orders/commit/694449ff553162d030dc6adb7fe5b4734e1ecf21#diff-05c836ce3d55f791a34c33cac08ccd1aR1)).
 
 Good luck
