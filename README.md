@@ -109,7 +109,10 @@ There are fonts URLs in the css files, they will need to be modified (I used the
 
 ### Others
 
-- The jquery file needs to be required in `application.js`.
+- :warning: The jquery file needs to be required in `application.js`.
+```js
+//= require inspinia/jquery-3.1.1.min.js
+```
 
 - `ls -1` displays the list of files in one column, easy to copy paste.
 
