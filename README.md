@@ -82,9 +82,16 @@ You can see the steps I took to install the template by following the commits.
 
 ### How do I know which css files do I need to add?
 Lookup the stylesheet tags in the html file.
+```html
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+```
 
 ### How do I know which js files do I need to add?
-Those that provoke errors in your browser console. Otherwise lookup the scrip tags in your html file.
+They will be requested by the browser but not found and thus they will display errors in your browser console. Otherwise lookup the scrip tags in your html file.
+```html
+  <script src="js/inspinia.js"></script>
+```
+
 
 ### Fonts and images
 The rails console log will display some errors.
