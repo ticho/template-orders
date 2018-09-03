@@ -12,7 +12,16 @@ Your can see the Inspinia template installed on a page [here](https://radiant-se
 
 ## How to
 
-For each css and js resources we will have to:
+First copy the HTML file in your app and add the `.erb` extension.
+```sh
+app
+├── ... 
+└── views
+    ├── home
+    |    └── index.html.erb
+    └── layouts
+```
+Then, for each css and js resources we will have to:
   1. Add them in the `app/assets/< type of the file >` folder
 
   ``` sh
