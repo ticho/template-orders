@@ -18,7 +18,7 @@ app
 ├── ... 
 └── views
     ├── home
-    |    └── index.html.erb
+    │    └── index.html.erb
     └── layouts
 ```
 Then, for each css and js resources we will have to:
@@ -30,7 +30,7 @@ app
 │   ├── config
 │   ├── images
 │   ├── javascripts
-|   |   .
+│   │   .
 │   │   └── inspinia.js
 │   └── stylesheets
 │       .
